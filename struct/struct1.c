@@ -1,44 +1,26 @@
-//// ·ÃÎÊ½á¹¹³ÉÔ±
-//
-//#include <stdio.h>
-//#include <string.h>
-//
-//struct Books
-//{
-//   char  title[50];
-//   char  author[50];
-//   char  subject[100];
-//   int   book_id;
-//};
-//
-//int main( )
-//{
-//   struct Books Book1;        /* ÉùÃ÷ Book1£¬ÀàĞÍÎª Books */
-//   struct Books Book2;        /* ÉùÃ÷ Book2£¬ÀàĞÍÎª Books */
-//
-//   /* Book1 ÏêÊö */
-//   strcpy( Book1.title, "C Programming");
-//   strcpy( Book1.author, "Nuha Ali");
-//   strcpy( Book1.subject, "C Programming Tutorial");
-//   Book1.book_id = 6495407;
-//
-//   /* Book2 ÏêÊö */
-//   strcpy( Book2.title, "Telecom Billing");
-//   strcpy( Book2.author, "Zara Ali");
-//   strcpy( Book2.subject, "Telecom Billing Tutorial");
-//   Book2.book_id = 6495700;
-//
-//   /* Êä³ö Book1 ĞÅÏ¢ */
-//   printf( "Book 1 title : %s\n", Book1.title);
-//   printf( "Book 1 author : %s\n", Book1.author);
-//   printf( "Book 1 subject : %s\n", Book1.subject);
-//   printf( "Book 1 book_id : %d\n", Book1.book_id);
-//
-//   /* Êä³ö Book2 ĞÅÏ¢ */
-//   printf( "Book 2 title : %s\n", Book2.title);
-//   printf( "Book 2 author : %s\n", Book2.author);
-//   printf( "Book 2 subject : %s\n", Book2.subject);
-//   printf( "Book 2 book_id : %d\n", Book2.book_id);
-//
-//   return 0;
-//}
+#include <stdio.h>
+#include <string.h>
+
+struct Hero 
+{
+    int id;
+    char name[50];// è‹±é›„çš„åç§°
+    int level;// è‹±é›„çš„ç­‰çº§
+    int hp;// è‹±é›„çš„è¡€é‡
+    int mp;// è‹±é›„çš„é­”æ³•å€¼
+    char skill[50];// è‹±é›„çš„æŠ€èƒ½
+};
+
+int main()
+{
+    // ä½¿ç”¨ç»“æ„ä½“
+    struct Hero hero1 = {2, "å«Œåˆ©æ¯", 10, 1000,  200, "åˆ†ç»„"};
+    // hero1.id = 1;
+    // strcpy(hero1.name, "å¾·ç›è¥¿äºšä¹‹åŠ›");
+    // hero1.level = 5;
+    // hero1.hp = 500;
+    // hero1.mp = 100;
+    // strcpy(hero1.skill, "å¤§ä¿å¥");
+    printf("%d\t%s\t%d\t%d\t%d\t%s\n", hero1.id, hero1.name, hero1.level, hero1.hp, hero1.mp, hero1.skill);
+    return 0;
+}

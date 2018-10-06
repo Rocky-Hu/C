@@ -1,47 +1,24 @@
-////½á¹¹×÷Îªº¯Êı²ÎÊı
-//
-//#include <stdio.h>
-//#include <string.h>
-//
-//struct Books
-//{
-//   char  title[50];
-//   char  author[50];
-//   char  subject[100];
-//   int   book_id;
-//};
-//
-///* º¯ÊıÉùÃ÷ */
-//void printBook( struct Books book );
-//int main( )
-//{
-//   struct Books Book1;        /* ÉùÃ÷ Book1£¬ÀàĞÍÎª Books */
-//   struct Books Book2;        /* ÉùÃ÷ Book2£¬ÀàĞÍÎª Books */
-//
-//   /* Book1 ÏêÊö */
-//   strcpy( Book1.title, "C Programming");
-//   strcpy( Book1.author, "Nuha Ali");
-//   strcpy( Book1.subject, "C Programming Tutorial");
-//   Book1.book_id = 6495407;
-//
-//   /* Book2 ÏêÊö */
-//   strcpy( Book2.title, "Telecom Billing");
-//   strcpy( Book2.author, "Zara Ali");
-//   strcpy( Book2.subject, "Telecom Billing Tutorial");
-//   Book2.book_id = 6495700;
-//
-//   /* Êä³ö Book1 ĞÅÏ¢ */
-//   printBook( Book1 );
-//
-//   /* Êä³ö Book2 ĞÅÏ¢ */
-//   printBook( Book2 );
-//
-//   return 0;
-//}
-//void printBook( struct Books book )
-//{
-//   printf( "Book title : %s\n", book.title);
-//   printf( "Book author : %s\n", book.author);
-//   printf( "Book subject : %s\n", book.subject);
-//   printf( "Book book_id : %d\n", book.book_id);
-//}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Hero 
+{
+    int id;
+    char * name;// è‹±é›„çš„åç§°
+    int level;// è‹±é›„çš„ç­‰çº§
+    int hp;// è‹±é›„çš„è¡€é‡
+    int mp;// è‹±é›„çš„é­”æ³•å€¼
+    char skill[50];// è‹±é›„çš„æŠ€èƒ½
+};
+
+int main()
+{
+    // ä½¿ç”¨ç»“æ„ä½“
+    struct Hero hero1 = {2, "å«Œåˆ©æ¯", 10, 1000,  200, "åˆ†ç»„"};
+    printf("è¯·è¾“å…¥è‹±é›„çš„åç§°ï¼š");
+    hero1.name = (char*) malloc(50);
+    scanf("%s", hero1.name);
+    printf("%d\t%s\t%d\t%d\t%d\t%s\n", hero1.id, hero1.name, hero1.level, hero1.hp, hero1.mp, hero1.skill);
+    return 0;
+}
