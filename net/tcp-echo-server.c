@@ -4,6 +4,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#include <arpa/inet.h>
 
 #define BUFFER_SIZE 1024
 #define on_error(...) { fprintf(stderr, __VA_ARGS__); fflush(stderr); exit(1); }
@@ -34,11 +35,15 @@ int main(int argc, char *argv[]) {
     if (err < 0) on_error("Could not listen on socket\n");
 
     printf("Server is listening on %d\n", port);
+    printf("Server IP address is: %s\n", inet_ntoa(server.sin_addr));
+    printf("Server port is: %d\n", (int) ntohs(server.sin_port));
 
     while (1) {
         socklen_t client_len = sizeof(client);
         client_fd = accept(server_fd, (struct sockaddr *) &client, &client_len); 
         printf("get a connection %d\n", client_fd);
+        printf("Client IP address is: %s\n", inet_ntoa(client.sin_addr));
+        printf("Client port is: %d\n", (int) ntohs(client.sin_port));
 
         if (client_fd < 0) on_error("Could not establish new connection\n");
 

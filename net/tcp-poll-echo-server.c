@@ -7,8 +7,6 @@
 #include <errno.h>
 #include <fcntl.h>
 
-https://stackoverflow.com/questions/14388706/how-do-so-reuseaddr-and-so-reuseport-differ
-
 #define BUFFER_SIZE 1024
 #define on_error(...) { fprintf(stderr, __VA_ARGS__); fflush(stderr); exit(1); }
 
