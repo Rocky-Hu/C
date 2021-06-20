@@ -19,10 +19,9 @@ int main(int argc, char const *argv[]) {
     sockaddr.sin_family = AF_INET;
     sockaddr.sin_port = htons(3459);
     sockaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    // inet_pton(AF_INET, "127.0.0.1", &sockaddr.sin_addr);
 
-    // int optval = 1;
-    // setsockopt(lfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
+    int optval = 1;
+    setsockopt(lfd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval));
 
     if (bind(lfd, (struct sockaddr*)&sockaddr, sizeof(sockaddr)) == -1) {
         perror("bind: ");

@@ -2,6 +2,12 @@
     "files.associations": {
         "unistd.h": "c",
         "errno.h": "c",
-        "inet.h": "c"
+        "inet.h": "c",
+        "__bit_reference": "c",
+        "__string": "c",
+        "cstring": "c",
+        "__config": "c",
+        "locale": "c",
+        "stdlib.h": "c"
     }
 }

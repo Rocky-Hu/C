@@ -53,6 +53,8 @@ int main(int argc, char *argv[]) {
             if (!read) break; // done reading
             if (read < 0) on_error("Client read failed\n");
 
+            printf("server received %d bytes: %s", read, buf);
+
             err = send(client_fd, buf, read, 0);
             if (err < 0) on_error("Client write failed\n");
         }
