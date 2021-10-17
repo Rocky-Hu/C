@@ -8,6 +8,13 @@
         "cstring": "c",
         "__config": "c",
         "locale": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "pthread.h": "c",
+        "stdio.h": "c",
+        "memory.h": "c",
+        "types.h": "c",
+        "socket.h": "c",
+        "netdb.h": "c",
+        "in.h": "c"
     }
 }
